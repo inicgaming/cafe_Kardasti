@@ -67,47 +67,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    flex-wrap: nowrap;          /* روی دسکتاپ کنار هم بمونن */
+    flex-wrap: nowrap;            /* همیشه کنار هم بمونن */
     transition: box-shadow 0.3s;
     cursor: pointer;
-}
-
-/* وقتی صفحه خیلی باریک شد (موبایل) → عمودی بشیم */
-@media (max-width: 768px) {
-    .box {
-        flex-direction: column;   /* عکس بالا، متن وسط، عکس پایین */
-        text-align: center;
-        padding: 25px;
-        gap: 20px;
-    }
-
-    .img-left, .img-right {
-        width: 70px;
-        height: 70px;
-        order: 1;                 /* هر دو عکس برن بالا */
-    }
-
-    .img-right {
-        order: 3;                 /* این یکی بره پایین‌تر از متن */
-    }
-
-    .text {
-        order: 2;                 /* متن وسط بمونه */
-        min-width: 0;             /* اجازه بده متن تو فضای کم هم جا بشه */
-    }
-}
-
-/* اگه بخوای روی تبلت هم افقی بمونه ولی موبایل عمودی، اینو بذار */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .box {
-        padding: 25px;
-        gap: 25px;
-    }
-    
-    .img-left, .img-right {
-        width: 60px;
-        height: 60px;
-    }
+    min-width: 0;                 /* خیلی مهمه برای جلوگیری از overflow */
 }
 
 .img-left, .img-right {
@@ -115,25 +78,49 @@ body {
     height: 50px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 auto rgba(0, 0, 0, 0);
-    flex-shrink: 0 auto;
+    flex-shrink: 0;              /* عکس‌ها اصلاً کوچیک نشن */
 }
 
 .text {
     flex: 1;
     text-align: center;
-    min-width: 200px;
+    min-width: 0;                /* اجازه می‌ده متن تو فضای کم هم جا بشه */
+    overflow-wrap: break-word;   /* کلمات بلند رو بشکنه */
 }
 
-.text h1 {
-    margin: 0 0 15px 0;
-    color: #333;
+/* فقط روی موبایل خیلی کوچیک – عکس‌ها رو کوچیک‌تر کن */
+@media (max-width: 480px) {
+    .box {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .img-left, .img-right {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .text h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    
+    .text p {
+        font-size: 1em;
+    }
 }
 
-.text p {
-    margin: 0;
-    color: #555;
-    font-size: 1.1em;
+/* تبلت و موبایل متوسط – یه کم کوچیک‌تر ولی هنوز افقی */
+@media (max-width: 768px) {
+    .box {
+        padding: 25px;
+        gap: 20px;
+    }
+    
+    .img-left, .img-right {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @keyframes fadeIn {

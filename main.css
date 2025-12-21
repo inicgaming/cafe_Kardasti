@@ -132,7 +132,7 @@ img {
 /* ------------------------------------ */
 .card {
     --background: none;
-    width: 40%;
+    width: 85%;
     height: 100%;
     padding: 1px;
     border-radius: 1rem;
@@ -142,7 +142,7 @@ img {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.4s ease;
-    margin: 20px 30% auto; 
+    margin: 0 auto; 
 }
 .card::after {
     content: "";
@@ -240,3 +240,4 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 700;
 }
+

@@ -73,7 +73,7 @@ body {
     height: 50px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 auto rgba(0,0,0,0.1);
     flex-shrink: 0;
 }
 
@@ -102,4 +102,5 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 700;
 }
+
 

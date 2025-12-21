@@ -60,16 +60,54 @@ body {
 .box {
     height: 100%;
     background: rgba(11, 161, 99, 0.5);
-    padding: 20px; /* روی موبایل کمی کمتر کردیم که جا باز بشه */
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;            /* ← اجازه می‌ده بره خط بعد */
+    gap: 30px;
+    flex-wrap: nowrap;          /* روی دسکتاپ کنار هم بمونن */
     transition: box-shadow 0.3s;
     cursor: pointer;
+}
+
+/* وقتی صفحه خیلی باریک شد (موبایل) → عمودی بشیم */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;   /* عکس بالا، متن وسط، عکس پایین */
+        text-align: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .img-left, .img-right {
+        width: 70px;
+        height: 70px;
+        order: 1;                 /* هر دو عکس برن بالا */
+    }
+
+    .img-right {
+        order: 3;                 /* این یکی بره پایین‌تر از متن */
+    }
+
+    .text {
+        order: 2;                 /* متن وسط بمونه */
+        min-width: 0;             /* اجازه بده متن تو فضای کم هم جا بشه */
+    }
+}
+
+/* اگه بخوای روی تبلت هم افقی بمونه ولی موبایل عمودی، اینو بذار */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .box {
+        padding: 25px;
+        gap: 25px;
+    }
+    
+    .img-left, .img-right {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .img-left, .img-right {
@@ -105,21 +143,4 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 700;
-}
-@media (max-width: 768px) {
-    .box {
-        flex-direction: column;  /* عکس‌ها بالا و پایین متن */
-        text-align: center;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .img-left, .img-right {
-        width: 60px;
-        height: 60px;
-    }
-
-    .text {
-        min-width: 0; /* این مهمه که متن هم تو فضای کم جا بشه */
-    }
 }

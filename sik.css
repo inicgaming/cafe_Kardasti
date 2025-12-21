@@ -1,12 +1,16 @@
-body { 
-    background-image: url(bak.jpg);
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* بقیه استایل‌هات */
+    background-image: url('bak.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
 }
 
 .splash {
@@ -63,9 +67,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap;          /* ← اینو حذف یا تغییر بده */
     transition: box-shadow 0.3s;
-    cursor: pointer; /* نشانگر دست وقتی ماوس می‌ره روش */
+    cursor: pointer;
 }
 
 .img-left, .img-right {
@@ -73,8 +77,8 @@ body {
     height: 50px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 auto rgba(0,0,0,0.1);
-    flex-shrink: 0;
+    box-shadow: 0 auto rgba(0, 0, 0, 0);
+    flex-shrink: 0 auto;
 }
 
 .text {
@@ -102,5 +106,3 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 700;
 }
-
-

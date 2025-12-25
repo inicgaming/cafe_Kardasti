@@ -34,6 +34,7 @@ body {
     animation: fadeIn 0.5s 2.5s forwards;
     display: flex;
     flex-direction: column;
+    color: #CA910D;
 }
 
 /* لینک کل باکس */
@@ -59,7 +60,7 @@ body {
 
 .box {
     height: 100%;
-    background: rgba(11, 161, 99, 0.5);
+    background: #00a0ab7a;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);

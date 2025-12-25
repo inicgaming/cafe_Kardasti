@@ -23,7 +23,7 @@ body::before {
 /* ------------------------------------ */
 header, footer {
     margin: 0 auto;
-    --background: rgba(235, 244, 221, 0.5);
+    --background: #D8CDAB7a;
     width: 100%;
     height: 30%;
     padding: 1px;
@@ -42,6 +42,7 @@ header, footer {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+    color: #3F2A1D;
 }
 footer {
     clear: both;
@@ -52,7 +53,7 @@ nav {
     padding: 2px 20px 10px 5px;            
     background-color: rgb(144, 171, 139, 0.5);
     margin: 5px 0px;     
-    color: #3B4953; 
+    color: #3F2A1D; 
     border-radius: 1rem;          
 }
 /*-----------------------------------*/
@@ -96,17 +97,17 @@ nav ul {
     padding: 0;
     background-color:rgb(144, 171, 139, 0.1);
     display: flex;
-    color: #000;
+    color: #3F2A1D;
     margin: 2px 0px;  
 }
 /* ------------------------------------ */
 nav li a {
     text-decoration: none;
-    color: #000000;
+    color: #3F2A1D;
     display: block;
     padding-right: 2px;
     padding-left: 2px;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #3F2A1D;
 }
 nav li a:hover {
     font-weight: bold;
@@ -142,9 +143,9 @@ img {
 }
 /* ------------------------------------ */
 .card {
-    --background: none;
+    --background: #00a0ab7a;
     width: 85%;
-    height: 100%;
+    height: 85%;
     padding: 1px;
     border-radius: 1rem;
     background: var(--background);
@@ -154,6 +155,8 @@ img {
     cursor: pointer;
     transition: transform 0.4s ease;
     margin: 0 auto; 
+    margin-bottom: 25px;
+    color: #3F2A1D;
 }
 .card::after {
     content: "";
@@ -161,8 +164,8 @@ img {
     top: -20px;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 85%;
     background: var(--background);
     border-radius: 1rem;
     filter: blur(40px);
@@ -233,7 +236,7 @@ img {
 }
 /* ------------------------------------ */
 .card2{
-    --background: rgb(0, 0, 0);
+    --background: #CA910D;
     width: 100%;
     height: 100%;
     padding: 1px;
@@ -251,5 +254,3 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 700;
 }
-
-
